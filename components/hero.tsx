@@ -14,9 +14,9 @@ export default function Hero() {
 			<Image
 				src={BG}
 				alt="mint"
-				className="absolute left-[600px] bottom-[-100px]" 
+				className="absolute left-[33%]" 
 			/>
-            <div className="flex flex-col justify-center h-[55vh] sm:h-[90vh] lg:px-64 whitespace-nowrap w-full">
+            <div className="flex flex-col justify-center h-[55vh] sm:h-[90vh] lg:px-96 whitespace-nowrap w-full">
                 <p>Hi all. I am</p>
                 <p className="text-6xl">
                     Oscar Yu
