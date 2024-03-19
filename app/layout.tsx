@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {Providers} from "./providers";
+import { Fira_Code as FontMono} from "next/font/google"
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+
+const fontMono = FontMono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={fontMono.className}>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }
+

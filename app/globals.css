@@ -1,33 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+  
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #011627;
+  color: white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+.purple {
+  color: #4D5BCE;
+}
+
+.green {
+  color: #43D9AD;
+}
+
+.orange {
+  color: #E99287;
+}
+
+main {
+  width: 60%;
+}
+
+.hover-effect:hover {
+  --tw-border-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+
+.hover-effect:hover .hover-text {
+  color: #43D9AD; /* Change to the desired text color */
+  fill: #43D9AD;
+}
+
+.navhover:hover {
+  color: white;
+  fill: white;
 }
