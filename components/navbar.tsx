@@ -57,10 +57,10 @@ export const Navbar = () => {
       <NavbarContent className="flex basis-1/5 sm:basis-full h-12" justify="end">
 				<NavbarItem className="flex gap-4 h-12 items-center">
 					<Link isExternal href={siteConfig.links.github}>
-						<GithubIcon />
+						<GithubIcon className="text-default-600 " />
 					</Link>
 					<Link isExternal href={siteConfig.links.linkedin}>
-						<LinkedInIcon/>
+						<LinkedInIcon className="text-default-600" />
 					</Link>
 				</NavbarItem>
 				<NavbarItem className="border-gray-800 border-l pl-6 h-12 flex items-center text-gray-400 navhover" >
