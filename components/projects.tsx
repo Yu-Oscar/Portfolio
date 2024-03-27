@@ -34,7 +34,7 @@ export default function Projects() {
 ]
 	return (
 		<>
-            <div id="projects" className="pt-16 self-center flex flex-col ">
+            <div id="projects" className="pt-16  flex flex-col overflow-hidden text-wrap">
 				<p className="self-center mb-12">projects</p>
 
 			
@@ -42,18 +42,18 @@ export default function Projects() {
 				item.link === null ? (
 					<div 
 						key={index}
-						className="flex self-center gap-x-6 flex-col-reverse w-full md:flex-row mb-8 justify-center hover-effect p-4 rounded-lg"
+						className="text-wrap flex self-center gap-x-6 flex-col-reverse w-full md:flex-row mb-8 justify-center hover-effect p-4 rounded-lg"
 					>
 					<Image
 						src={item.src}
 						alt="mint"
 						className="rounded-lg flex object-contain md:mt-0 mt-4 w-64 justify-self-start border border-gray-600 mb-6 sm:mb-0" 
 					/>
-					<div className="flex-row w-96">
+					<div className="flex-row text-wrap md:w-80">
 						<div className="flex">
-							<span className="font-bold text-white fill-white hover-text">{item.title}</span>
+							<span className="font-bold text-white fill-white hover-text ">{item.title}</span>
 						</div>
-						<p className="text-sm text-gray-400 overflow-ellipsis">{item.description}</p>
+						<p className="text-sm text-gray-400 text-wrap">{item.description}</p>
 						<div className="mt-1 lg:mt-16">
 							{item.skills.map((skill, skillIndex) => (
 								<Chip key={skillIndex} variant="faded" className="mr-2 mb-2 green border-0 ">{skill}</Chip>
@@ -64,7 +64,7 @@ export default function Projects() {
 				) : (
 					<Link 
 						key={index}
-						className="flex self-center gap-x-6 flex-col-reverse md:flex-row w-full mb-8 items-start justify-center hover-effect p-4 rounded-lg"
+						className="flex gap-x-6 flex-col-reverse md:flex-row  mb-8 items-start justify-center hover-effect p-4 rounded-lg"
 						href={item.link}
 						isExternal
 					>
@@ -73,15 +73,14 @@ export default function Projects() {
 						alt="mint"
 						className="rounded-lg flex object-contain md:mt-0 mt-4 w-64 justify-self-start border border-gray-600 mb-6 sm:mb-0" 
 					/>
-					<div className="flex-row w-96">
-						<div className="flex ">
-							<span className="font-bold text-white fill-white hover-text">{item.title}</span>
-							<span className="ml-3 fill-white hover-text"><LinkIcon /></span>
+					<div className="flex-row text-wrap md:w-80">
+						<div className="flex">
+							<span className="font-bold text-white fill-white hover-text ">{item.title}</span>
 						</div>
-						<p className="text-sm text-gray-400 overflow-ellipsis">{item.description}</p>
+						<p className="text-sm text-gray-400 text-wrap">{item.description}</p>
 						<div className="mt-1 lg:mt-16">
 							{item.skills.map((skill, skillIndex) => (
-								<Chip key={skillIndex} variant="faded" className="mr-2 mb-2 green border-0">{skill}</Chip>
+								<Chip key={skillIndex} variant="faded" className="mr-2 mb-2 green border-0 ">{skill}</Chip>
 							))}
 						</div>
 					</div>
