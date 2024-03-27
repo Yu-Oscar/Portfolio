@@ -32,7 +32,7 @@ export const Navbar = () => {
 				<NavbarItem className="text-test ">
 					<NextLink
 						color="foreground"
-						href={'#'}
+						href={'/#'}
 						
 					>
 						oscar-yu

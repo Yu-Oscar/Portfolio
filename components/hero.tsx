@@ -12,7 +12,7 @@ import Image from "next/image";
 export default function Hero() {
 	return (
 		<>
-            <div className="flex flex-col justify-center h-[55vh] sm:h-[90vh] pl-10 text-wrap">
+            <div className="flex flex-col justify-center h-[55vh] sm:h-[90vh] pl-10 text-wrap lg:mr-64">
                 <p>Hi all. I am</p>
                 <p className="text-5xl sm:text-6xl">
                     Oscar Yu

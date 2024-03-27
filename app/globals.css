@@ -3,8 +3,9 @@
 @tailwind utilities;
   
 body {
-  background-color: #011627;
+  background: linear-gradient(to bottom right, #000000, #021D15);
   color: white;
+  fill: white;
 }
 
 html {

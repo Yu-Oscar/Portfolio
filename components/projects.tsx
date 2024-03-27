@@ -13,7 +13,7 @@ export default function Projects() {
 		{
 			title: "Personal Portfolio",
 			description: "Make beautiful websites regardless of your design experience.",
-			link: null,
+			link: 'https://github.com/Yu-Oscar/Portfolio',
 			src: Portfolio,
 			skills: ['Nextjs', "NextUI"]
 		},
@@ -73,9 +73,10 @@ export default function Projects() {
 						alt="mint"
 						className="rounded-lg flex object-contain md:mt-0 mt-4 w-64 justify-self-start border border-gray-600 mb-6 sm:mb-0" 
 					/>
-					<div className="flex-row text-wrap md:w-80">
-						<div className="flex">
+					<div className="flex-row text-wrap md:w-96">
+						<div className="flex justify-between">
 							<span className="font-bold text-white fill-white hover-text ">{item.title}</span>
+							<LinkIcon/>
 						</div>
 						<p className="text-sm text-gray-400 text-wrap">{item.description}</p>
 						<div className="mt-1 lg:mt-16">
