@@ -20,7 +20,7 @@ export default function Hero() {
                 <p className="purple mb-20 flex flex-wrap">
                     <span className="text-2xl sm:text-3xl">{">"} Comp Sci Student </span>
                     <NextLink
-								className="text-lg sm:text-xl self-end ml-4"
+								className="text-lg sm:text-xl self-end ml-4 "
 								color="foreground"
 								href='https://www.durham.ac.uk/'
 								target="_blank" 
@@ -33,7 +33,7 @@ export default function Hero() {
                 {siteConfig.navItems.map((item) => (
 						<div key={item.href} className="mb-1">
 							<NextLink
-								className="text-gray-400"
+								className="text-gray-400 navhover"
 								color="foreground"
 								href={item.href}
 								
