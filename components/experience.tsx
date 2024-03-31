@@ -1,6 +1,3 @@
-import { Link } from "@nextui-org/link";
-
-
 export default function Experience() {
 	return (
 		<>

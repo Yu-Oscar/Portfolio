@@ -12,10 +12,10 @@ export default function Projects() {
 	const contentList = [
 		{
 			title: "Personal Portfolio",
-			description: "Make beautiful websites regardless of your design experience.",
+			description: "Designed a portfolio website using NextJs and NextUI and hosted on Vercel",
 			link: 'https://github.com/Yu-Oscar/Portfolio',
 			src: Portfolio,
-			skills: ['Nextjs', "NextUI"]
+			skills: ['Nextjs', "NextUI", "Vercel"]
 		},
 		{
 			title: "NFT Minting @ChainChallenger",
@@ -26,7 +26,7 @@ export default function Projects() {
 		},
 		{
 			title: "Streaming Platform @ChainChallenger",
-			description: "Make beautiful websites regardless of your design experience.",
+			description: "Assisted in building a streaming platform specified for Gamefi streams, implementing responsive UI/UX design for web & mobile viewers. Implemented a quiz raffle system, allowing livestream viewers to participate using cryptocurrencies",
 			link: "https://live.chainchallenger.xyz/",
 			src: Live,
 			skills: ['Nextjs', "NextUI", "Clerk", "LiveKit"]
