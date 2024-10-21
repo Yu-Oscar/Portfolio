@@ -13,11 +13,11 @@ export default function Skills() {
         },
         { 
             title: 'Backend', 
-            sub: ['"NodeJs, Express.js, MongoDB, SQL"']
+            sub: ['"NodeJs, Express.js, MongoDB, SQL, LangChain, OpenAI"']
         },
         { 
             title: 'Tools', 
-            sub: ['"Figma, Adobe Photoshop, Wowza, Git"']
+            sub: ['"Figma, Adobe Photoshop, Git, Azure"']
         }
     ]
 	return (

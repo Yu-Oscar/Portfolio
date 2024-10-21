@@ -4,33 +4,29 @@ import Image from "next/image";
 
 import { LinkIcon } from "@/components/icons";
 
-import Mint from "@/components/image/mint.png";
-import Live from "@/components/image/live.png";
-import Portfolio from "@/components/image/portfolio.png";
-
 export default function Projects() {
 	const contentList = [
-		{
-			title: "Personal Portfolio",
-			description: "Designed a portfolio website using NextJs and NextUI and hosted on Vercel",
-			link: 'https://github.com/Yu-Oscar/Portfolio',
-			src: Portfolio,
-			skills: ['Nextjs', "NextUI", "Vercel"]
-		},
-		{
-			title: "NFT Minting @ChainChallenger",
-			description: "Web app for minting NFT. Designed all frontend elements using Nextjs and NextUI, allow users to connect their crypto wallet using RainbowKit.",
-			link: "https://cc-mint-frontend.pages.dev/",
-			src: Mint,
-			skills: ['Nextjs', "NextUI", "RainbowKit"]
-		},
-		{
-			title: "Streaming Platform @ChainChallenger",
-			description: "Assisted in building a streaming platform specified for Gamefi streams, implementing responsive UI/UX design for web & mobile viewers. Implemented a quiz raffle system, allowing livestream viewers to participate using cryptocurrencies",
-			link: "https://live.chainchallenger.xyz/",
-			src: Live,
-			skills: ['Nextjs', "NextUI", "Clerk", "LiveKit"]
-		},
+    {
+        title: "Personal Portfolio",
+        description: "Designed a portfolio website using NextJs and NextUI and hosted on Vercel",
+        link: 'https://github.com/Yu-Oscar/Portfolio',
+        src: "/components/image/portfolio.png",
+        skills: ['Nextjs', "NextUI", "Vercel"]
+    },
+    {
+        title: "NFT Minting @ChainChallenger",
+        description: "Web app for minting NFT. Designed all frontend elements using Nextjs and NextUI, allow users to connect their crypto wallet using RainbowKit.",
+        link: "https://cc-mint-frontend.pages.dev/",
+        src: "/components/image/mint.png",
+        skills: ['Nextjs', "NextUI", "RainbowKit"]
+    },
+    {
+        title: "Clutch TV @ChainChallenger",
+        description: "Assisted in building a streaming platform specified for Gamefi streams, implementing responsive UI/UX design for web & mobile viewers. Implemented a quiz raffle system, allowing livestream viewers to participate using cryptocurrencies",
+        link: "https://clutchtv.live/",
+        src: "/components/image/live.png",
+        skills: ['Nextjs', "NextUI", "Clerk", "LiveKit"]
+    },
 ]
 	return (
 		<>
