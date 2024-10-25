@@ -10,21 +10,21 @@ export default function Projects() {
         title: "Personal Portfolio",
         description: "Designed a portfolio website using NextJs and NextUI and hosted on Vercel",
         link: 'https://github.com/Yu-Oscar/Portfolio',
-        src: "@/components/image/portfolio.png",
+        src: "../components/image/portfolio.png",
         skills: ['Nextjs', "NextUI", "Vercel"]
     },
     {
         title: "NFT Minting @ChainChallenger",
         description: "Web app for minting NFT. Designed all frontend elements using Nextjs and NextUI, allow users to connect their crypto wallet using RainbowKit.",
         link: "https://cc-mint-frontend.pages.dev/",
-        src: "@/components/image/mint.png",
+        src: "../components/image/mint.png",
         skills: ['Nextjs', "NextUI", "RainbowKit"]
     },
     {
         title: "Clutch TV @ChainChallenger",
         description: "Assisted in building a streaming platform specified for Gamefi streams, implementing responsive UI/UX design for web & mobile viewers. Implemented a quiz raffle system, allowing livestream viewers to participate using cryptocurrencies",
         link: "https://clutchtv.live/",
-        src: "@/components/image/live.png",
+        src: "../components/image/live.png",
         skills: ['Nextjs', "NextUI", "Clerk", "LiveKit"]
     },
 ]
