@@ -25,7 +25,14 @@ export default function Projects() {
         description: "Assisted in building a streaming platform specified for Gamefi streams, implementing responsive UI/UX design for web & mobile viewers. Implemented a quiz raffle system, allowing livestream viewers to participate using cryptocurrencies",
         link: "https://clutchtv.live/",
         src: "/image/live.png",
-        skills: ['Nextjs', "NextUI", "Clerk", "LiveKit"]
+        skills: ['Nextjs', "Javascript", "React"]
+	},
+	{
+        title: "Mop! Clean! Sweep!",
+        description: "Built an Puzzle Maze game with Unity and C#, implemented game logics, sound effects and achievement system.",
+        link: null,
+        src: "/image/game.png",
+        skills: ['Unity', "C#"]
     },
 ]
 	return (

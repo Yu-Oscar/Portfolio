@@ -5,11 +5,11 @@ export default function Skills() {
 	const contentList = [
 		{ 
             title: 'Languages', 
-            sub: ['"TypeScript, Javascript, Python, Haskell, C, C#"']
+            sub: ['"TypeScript, Javascript, Python, Haskell, C, Dart, C#"']
         },
         { 
             title: 'Frontend', 
-            sub: ['"Next.js, ReactJS, React Native, Tailwind CSS, Bootstrap, HTML/CSS"']
+            sub: ['"Next.js, ReactJS, React Native, Flutter, Tailwind CSS, Bootstrap, HTML/CSS"']
         },
         { 
             title: 'Backend', 
@@ -17,7 +17,7 @@ export default function Skills() {
         },
         { 
             title: 'Tools', 
-            sub: ['"Figma, Adobe Photoshop, Git, Azure"']
+            sub: ['"Figma, Photoshop, Git, Docker, Unity"']
         }
     ]
 	return (
