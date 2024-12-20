@@ -30,7 +30,7 @@ export default function Projects() {
 	{
         title: "Mop! Clean! Sweep!",
         description: "Built an Puzzle Maze game with Unity and C#, implemented game logics, sound effects and achievement system.",
-        link: null,
+        link: "https://yu-oscar.itch.io/mop-clean-sweep",
         src: "/image/game.png",
         skills: ['Unity', "C#"]
     },
