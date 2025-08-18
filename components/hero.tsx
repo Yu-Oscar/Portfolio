@@ -3,15 +3,15 @@ import NextLink from "next/link";
 export default function Hero() {
 	return (
 		<>
-            <div className="flex flex-col justify-center h-[55vh] sm:h-[90vh] pl-10 text-wrap lg:mr-64">
-                <p>Hi all. I am</p>
-                <p className="text-5xl sm:text-6xl">
+            <div className="flex flex-col justify-center h-[60vh] sm:h-[75vh] lg:h-[90vh] px-4 sm:px-6 lg:px-10 text-wrap lg:mr-64 animate-fadeInUp">
+                <p className="text-base sm:text-lg lg:text-xl mb-2 text-gray-300 animate-fadeIn">Hi all. I am</p>
+                <p className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-4 text-gradient">
                     Oscar Yu
                 </p>
-                <p className="green mb-20 flex flex-wrap">
-                    <span className="text-2xl sm:text-3xl">{">"} Comp Sci Graduate </span>
+                <div className="green mb-8 sm:mb-12 lg:mb-20 flex flex-wrap items-center animate-fadeIn">
+                    <span className="text-xl sm:text-2xl lg:text-3xl font-medium">{">"} Comp Sci Graduate </span>
                     <NextLink
-								className="text-lg sm:text-xl self-end ml-4 "
+								className="text-sm sm:text-lg lg:text-xl self-end ml-2 sm:ml-4 glass px-3 py-1 rounded-lg hover:bg-white/10 transition-all duration-200"
 								color="foreground"
 								href='https://www.durham.ac.uk/'
 								target="_blank" 
@@ -19,20 +19,22 @@ export default function Hero() {
 							>
 								@durham uni
 							</NextLink>
-                </p>
+                </div>
 
-                {siteConfig.navItems.map((item) => (
-						<div key={item.href} className="mb-1">
-							<NextLink
-								className="text-gray-400 navhover"
-								color="foreground"
-								href={item.href}
-								
-							>
-								{">"} {item.label}
-							</NextLink>
-						</div>
-					))}
+                <div className="space-y-3 animate-fadeInUp">
+                    {siteConfig.navItems.map((item, index) => (
+						    <div key={item.href} className="group">
+							    <NextLink
+								    className="text-gray-300 navhover flex items-center gap-2 text-lg hover:text-white transition-colors duration-200"
+								    color="foreground"
+								    href={item.href}
+							    >
+								    <span className="text-primary">{">"}</span>
+								    <span className="group-hover:translate-x-1 transition-transform duration-200">{item.label}</span>
+							    </NextLink>
+						    </div>
+					    ))}
+                </div>
             </div>
 		</>
 	);

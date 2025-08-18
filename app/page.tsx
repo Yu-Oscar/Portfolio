@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
     <Navbar />
-    <main className="flex flex-col items-center justify-between px-5 sm:px-24 w-full">
+    <main className="flex flex-col items-center justify-between px-3 sm:px-6 md:px-12 lg:px-24 xl:px-32 w-full max-w-screen-2xl mx-auto">
       <Hero />
       <Skills />
       <Project />

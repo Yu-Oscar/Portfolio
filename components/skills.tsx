@@ -27,15 +27,21 @@ export default function Skills() {
   ];
   return (
     <>
-      <div id="skills" className="pt-16 h-full">
-        {contentList.map((item, index) => (
-          <p key={index} className="mb-1">
-            <span className="purple">var </span>
-            <span className="green">{item.title}</span>
-            <span> = </span>
-            <span className="orange">{item.sub.join(", ")}</span>
-          </p>
-        ))}
+      <div id="skills" className="pt-8 sm:pt-12 lg:pt-16 h-full px-2 sm:px-4">
+        <div className="section-divider"></div>
+        <h2 className="text-3xl lg:text-4xl font-bold text-gradient mb-8 text-center animate-fadeIn">skills</h2>
+        <div className="glass p-6 sm:p-8 rounded-2xl max-w-4xl mx-auto animate-fadeInUp">
+          {contentList.map((item, index) => (
+            <div key={index} className="mb-4 sm:mb-6 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10">
+              <div className="text-sm sm:text-base lg:text-lg font-mono leading-relaxed">
+                <span className="purple font-semibold">const </span>
+                <span className="green font-semibold">{item.title}</span>
+                <span className="text-gray-300"> = </span>
+                <span className="orange break-all">{item.sub.join(", ")}</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

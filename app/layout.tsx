@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import {Providers} from "./providers";
-import { Fira_Code as FontMono} from "next/font/google"
+import { Providers } from "./providers";
+import { Fira_Code as FontMono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
-
 
 const fontMono = FontMono({
   subsets: ["latin"],
   variable: "--font-mono",
-})
+});
 
 export const metadata: Metadata = {
   title: "Oscar Yu",
@@ -22,11 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fontMono.className}>
-        <Providers>
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );
 }
-
