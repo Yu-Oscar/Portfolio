@@ -7,14 +7,6 @@ import { LinkIcon } from "@/components/icons";
 export default function Projects() {
   const contentList = [
     {
-      title: "Personal Portfolio",
-      description:
-        "Designed a portfolio website using NextJs and NextUI and hosted on Vercel",
-      link: null,
-      src: "/image/portfolio.png",
-      skills: ["Nextjs", "NextUI", "Vercel"],
-    },
-    {
       title: "NFT Minting @ChainChallenger",
       description:
         "Web app for minting NFT. Designed all frontend elements using Nextjs and NextUI, allow users to connect their crypto wallet using RainbowKit.",
@@ -46,6 +38,22 @@ export default function Projects() {
       src: "/image/dao.png",
       skills: ["Nextjs", "Solidity", "Forge", "OpenZeppelin", "Wagmi"],
     },
+    {
+      title: "Portfolio Website",
+      description:
+        "Designed and developed a modern portfolio website for a photographer using Next.js and Tailwind CSS, featuring responsive design and smooth animations.",
+      link: "https://justin-cai-portfolio.vercel.app/",
+      src: "/image/justin-portfolio.png",
+      skills: ["Next.js", "Tailwind CSS", "React", "Vercel"],
+    },
+    {
+      title: "UK Visa Date Calculator",
+      description:
+        "Built a comprehensive calculator for British National (Overseas) visa holders to track their eligibility for Indefinite Leave to Remain (ILR) and British Citizenship, including absence tracking and requirement validation.",
+      link: "https://bno-calculator.vercel.app/en",
+      src: "/image/bno-calculator.png",
+      skills: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    },
   ];
   return (
     <>
@@ -55,63 +63,69 @@ export default function Projects() {
       >
         <p className="self-center mb-12">projects</p>
 
-        {contentList
-          .slice()
-          .reverse()
-          .map((item, index) => {
-            const ProjectContent = () => (
-              <div
-                className={`flex gap-x-6 flex-col-reverse md:flex-row mb-8 items-start justify-center hover-effect p-4 rounded-lg ${
-                  item.link ? "cursor-pointer" : "cursor-default"
-                }`}
-              >
-                <Image
-                  src={item.src}
-                  alt={item.title}
-                  width={256}
-                  height={256}
-                  priority={index === 0}
-                  className="rounded-lg flex object-contain md:mt-0 mt-4 w-64 justify-self-start border border-gray-600 mb-6 sm:mb-0"
-                />
-                <div className="flex-row text-wrap md:w-96">
-                  <div className="flex justify-between">
-                    <span className="font-bold text-white fill-white hover-text">
-                      {item.title}
-                    </span>
-                    {item.link && <LinkIcon />}
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {contentList
+              .slice()
+              .reverse()
+              .map((item, index) => {
+                const ProjectContent = () => (
+                  <div
+                    className={`flex flex-col h-full hover-effect p-6 rounded-xl transition-all duration-300 border border-gray-700 bg-gray-900/50 ${
+                      item.link ? "cursor-pointer" : "cursor-default"
+                    }`}
+                  >
+                    <div className="mb-4">
+                      <Image
+                        src={item.src}
+                        alt={item.title}
+                        width={400}
+                        height={250}
+                        priority={index === 0}
+                        className="rounded-lg object-cover w-full h-48 border border-gray-600"
+                      />
+                    </div>
+                    <div className="flex-1 flex flex-col">
+                      <div className="flex justify-between items-center mb-3">
+                        <span className="font-bold text-lg text-white hover-text">
+                          {item.title}
+                        </span>
+                        {item.link && <LinkIcon />}
+                      </div>
+                      <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                        {item.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {item.skills.map((skill, skillIndex) => (
+                          <Chip
+                            key={skillIndex}
+                            variant="faded"
+                            className="green border-0 text-xs"
+                          >
+                            {skill}
+                          </Chip>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-sm text-gray-400 text-wrap">
-                    {item.description}
-                  </p>
-                  <div className="mt-1 lg:mt-16">
-                    {item.skills.map((skill, skillIndex) => (
-                      <Chip
-                        key={skillIndex}
-                        variant="faded"
-                        className="mr-2 mb-2 green border-0"
-                      >
-                        {skill}
-                      </Chip>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            );
+                );
 
-            return item.link ? (
-              <Link
-                key={index}
-                href={item.link}
-                isExternal
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <ProjectContent />
-              </Link>
-            ) : (
-              <ProjectContent key={index} />
-            );
-          })}
+                return item.link ? (
+                  <Link
+                    key={index}
+                    href={item.link}
+                    isExternal
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ProjectContent />
+                  </Link>
+                ) : (
+                  <ProjectContent key={index} />
+                );
+              })}
+          </div>
+        </div>
       </div>
     </>
   );

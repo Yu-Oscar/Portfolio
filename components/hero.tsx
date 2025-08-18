@@ -9,7 +9,7 @@ export default function Hero() {
                     Oscar Yu
                 </p>
                 <p className="green mb-20 flex flex-wrap">
-                    <span className="text-2xl sm:text-3xl">{">"} Comp Sci Student </span>
+                    <span className="text-2xl sm:text-3xl">{">"} Comp Sci Graduate </span>
                     <NextLink
 								className="text-lg sm:text-xl self-end ml-4 "
 								color="foreground"
