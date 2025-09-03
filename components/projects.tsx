@@ -53,6 +53,14 @@ export default function Projects() {
       src: "/image/bno-calculator.png",
       skills: ["Next.js", "React", "Tailwind CSS", "Vercel"],
     },
+    {
+      title: "YouTube Search Scraper",
+      description:
+        "A Chrome extension for scraping and managing YouTube search results with modern UI design and batch processing capabilities. Features search result scraping, export management, auto-scroll functionality, and batch processing with comprehensive progress tracking.",
+      link: "https://github.com/Yu-Oscar/youtube_search_scraper",
+      src: "/image/youtube-scraper.png",
+      skills: ["Chrome Extension", "JavaScript", "HTML/CSS", "UI/UX"],
+    },
   ];
   return (
     <>
