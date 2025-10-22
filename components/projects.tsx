@@ -57,19 +57,34 @@ export default function Projects() {
       title: "YouTube Search Scraper",
       description:
         "A Chrome extension for scraping and managing YouTube search results with modern UI design and batch processing capabilities. Features search result scraping, export management, auto-scroll functionality, and batch processing with comprehensive progress tracking.",
-      link: "https://github.com/Yu-Oscar/youtube_search_scraper",
+      link: "https://chromewebstore.google.com/detail/ehbknlckjmdkmcenenpbdmnpddalndge?utm_source=item-share-cb",
       src: "/image/youtube-scraper.png",
       skills: ["Chrome Extension", "JavaScript", "HTML/CSS", "UI/UX"],
+    },
+    {
+      title: "Flash Convert - Instant Auto Unit Conversion",
+      description:
+        "Chrome extension for instant unit conversions via right-click. Supports time zones, currencies, temperatures, lengths, and weights with real-time rates and customizable preferences.",
+      link: "https://chromewebstore.google.com/detail/hhikhokgmfkagadbbjkkoeggmhcaiphm?utm_source=item-share-cb",
+      src: "/image/convert.png",
+      skills: ["Chrome Extension", "JavaScript", "API Integration", "UI/UX"],
+    },
+    {
+      title: "Speed Run Ethereum Portfolio",
+      description:
+        "Learning journey through Ethereum development challenges. Built smart contracts, NFT minting, token staking, and DeFi protocols using Solidity, Hardhat, and Scaffold-ETH 2.",
+      link: "https://speed-run-ethereum-portfolio.vercel.app/",
+      src: "/image/eth.png",
+      skills: ["Solidity", "Hardhat", "Next.js", "Scaffold-ETH 2", "Web3"],
     },
   ];
   return (
     <>
-      <div
-        id="projects"
-        className="pt-16 flex flex-col overflow-hidden"
-      >
+      <div id="projects" className="pt-16 flex flex-col overflow-hidden">
         <div className="section-divider"></div>
-        <h2 className="self-center mb-12 text-3xl lg:text-4xl font-bold text-gradient animate-fadeIn">projects</h2>
+        <h2 className="self-center mb-12 text-3xl lg:text-4xl font-bold text-gradient animate-fadeIn">
+          projects
+        </h2>
 
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">

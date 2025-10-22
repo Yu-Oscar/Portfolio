@@ -17,7 +17,7 @@ export default function Hero() {
 								target="_blank" 
                                 rel="noopener noreferrer"
 							>
-								@durham uni
+								@durham
 							</NextLink>
                 </div>
 
