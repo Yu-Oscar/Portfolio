@@ -73,7 +73,7 @@ export default function Projects() {
       title: "Speed Run Ethereum Portfolio",
       description:
         "Learning journey through Ethereum development challenges. Built smart contracts, NFT minting, token staking, and DeFi protocols using Solidity, Hardhat, and Scaffold-ETH 2.",
-      link: "https://speed-run-ethereum-portfolio.vercel.app/",
+      link: "https://speedrunethereum.com/builders/0xEe3869d7dFc3e1a2CB6399E00C6a39E019E1A80b",
       src: "/image/eth.png",
       skills: ["Solidity", "Hardhat", "Next.js", "Scaffold-ETH 2", "Web3"],
     },
