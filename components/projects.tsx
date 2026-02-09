@@ -17,7 +17,7 @@ export default function Projects() {
       title: "Clutch TV @ChainChallenger",
       description:
         "Assisted in building a streaming platform specified for Gamefi streams, implementing responsive UI/UX design for web & mobile viewers. Implemented a quiz raffle system, allowing livestream viewers to participate using cryptocurrencies",
-      link: "https://clutchtv.live/",
+      link: "https://x.com/clutch_xyz",
       src: "/image/live.png",
       skills: ["Nextjs", "Javascript", "React"],
     },
@@ -76,6 +76,23 @@ export default function Projects() {
       link: "https://speedrunethereum.com/builders/0xEe3869d7dFc3e1a2CB6399E00C6a39E019E1A80b",
       src: "/image/eth.png",
       skills: ["Solidity", "Hardhat", "Next.js", "Scaffold-ETH 2", "Web3"],
+    },
+    {
+      title: "MemeMe.hk",
+      description:
+        "Full-stack meme generator where users browse meme templates, add customizable text overlays, and share memes. Includes Supabase auth (Email OTP + Google OAuth), bookmarking, user uploads with quotas, and an admin panel for template management.",
+      link: "https://www.mememe.hk",
+      src: "/image/MemeMe.png",
+      skills: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "Supabase",
+        "Zustand",
+        "gif.js",
+        "FFmpeg",
+        "Vercel",
+      ],
     },
   ];
   return (
