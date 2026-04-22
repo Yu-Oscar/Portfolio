@@ -1,7 +1,40 @@
+"use client";
 import { Link } from "@nextui-org/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 import { LinkIcon } from "@/components/icons";
+
+function ProjectImage({
+  src,
+  alt,
+  priority,
+}: {
+  src: string;
+  alt: string;
+  priority: boolean;
+}) {
+  const fallbackSrc = "/image/bg.svg";
+  const [imageSrc, setImageSrc] = useState(src);
+
+  useEffect(() => {
+    setImageSrc(src);
+  }, [src]);
+
+  return (
+    <Image
+      src={imageSrc}
+      alt={alt}
+      width={400}
+      height={250}
+      priority={priority}
+      className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+      onError={() => {
+        if (imageSrc !== fallbackSrc) setImageSrc(fallbackSrc);
+      }}
+    />
+  );
+}
 
 export default function Projects() {
   const contentList = [
@@ -130,13 +163,10 @@ export default function Projects() {
                     className={`group flex flex-col h-full glass hover-effect p-6 rounded-2xl transition-all duration-500 cursor-pointer`}
                   >
                     <div className="mb-4 relative overflow-hidden rounded-xl">
-                      <Image
+                      <ProjectImage
                         src={item.src}
                         alt={item.title}
-                        width={400}
-                        height={250}
                         priority={index === 0}
-                        className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       {item.link && (
