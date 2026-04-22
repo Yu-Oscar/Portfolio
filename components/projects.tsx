@@ -94,6 +94,22 @@ export default function Projects() {
         "Vercel",
       ],
     },
+    {
+      title: "Full-stack Multi-Tenant Ticketing SaaS",
+      description:
+        "Built in The Road to Next Basic course, focusing on Next.js App Router, server components/actions, forms, auth, pagination, and REST API design.",
+      link: "https://road-to-next-website.vercel.app/",
+      src: "/image/road-to-next.png",
+      skills: [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "REST API",
+        "App Router",
+        "Server Actions",
+      ],
+    },
   ];
   return (
     <>
