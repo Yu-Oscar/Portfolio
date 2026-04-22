@@ -27,6 +27,7 @@ function ProjectImage({
       alt={alt}
       width={400}
       height={250}
+      unoptimized
       priority={priority}
       className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
       onError={() => {
