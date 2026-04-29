@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import { LinkIcon } from "@/components/icons";
+import { PROJECTS } from "@/data";
 
 function ProjectImage({
   src,
@@ -38,118 +39,18 @@ function ProjectImage({
 }
 
 export default function Projects() {
-  const contentList = [
-    {
-      title: "NFT Minting @ChainChallenger",
-      description:
-        "Web app for minting NFT. Designed all frontend elements using Nextjs and NextUI, allow users to connect their crypto wallet using RainbowKit.",
-      link: "https://cc-mint-frontend.pages.dev/",
-      src: "/image/mint.png",
-      skills: ["Nextjs", "NextUI", "RainbowKit"],
-    },
-    {
-      title: "Clutch TV @ChainChallenger",
-      description:
-        "Assisted in building a streaming platform specified for Gamefi streams, implementing responsive UI/UX design for web & mobile viewers. Implemented a quiz raffle system, allowing livestream viewers to participate using cryptocurrencies",
-      link: "https://x.com/clutch_xyz",
-      src: "/image/live.png",
-      skills: ["Nextjs", "Javascript", "React"],
-    },
-    {
-      title: "Mop! Clean! Sweep!",
-      description:
-        "Built an Puzzle Maze game with Unity and C#, implemented game logics, sound effects and achievement system.",
-      link: "https://yu-oscar.itch.io/mop-clean-sweep",
-      src: "/image/gamedev.png",
-      skills: ["Unity", "C#"],
-    },
-    {
-      title: "Football DAO",
-      description:
-        "Final year project on Decentralised Community Ownership of Football Clubs: A DAO Framework on Polygon Blockchain. Implemented smart contracts for governance, voting system, and token economics.",
-      link: "https://fyp-final-neon.vercel.app/",
-      src: "/image/dao.png",
-      skills: ["Nextjs", "Solidity", "Forge", "OpenZeppelin", "Wagmi"],
-    },
-    {
-      title: "Portfolio Website",
-      description:
-        "Designed and developed a modern portfolio website for a photographer using Next.js and Tailwind CSS, featuring responsive design and smooth animations.",
-      link: "https://justin-cai-portfolio.vercel.app/",
-      src: "/image/justin-portfolio.png",
-      skills: ["Next.js", "Tailwind CSS", "React", "Vercel"],
-    },
-    {
-      title: "UK Visa Date Calculator",
-      description:
-        "Built a comprehensive calculator for British National (Overseas) visa holders to track their eligibility for Indefinite Leave to Remain (ILR) and British Citizenship, including absence tracking and requirement validation.",
-      link: "https://bno-calculator.vercel.app/en",
-      src: "/image/bno-calculator.png",
-      skills: ["Next.js", "React", "Tailwind CSS", "Vercel"],
-    },
-    {
-      title: "YouTube Search Scraper",
-      description:
-        "A Chrome extension for scraping and managing YouTube search results with modern UI design and batch processing capabilities. Features search result scraping, export management, auto-scroll functionality, and batch processing with comprehensive progress tracking.",
-      link: "https://chromewebstore.google.com/detail/ehbknlckjmdkmcenenpbdmnpddalndge?utm_source=item-share-cb",
-      src: "/image/youtube-scraper.png",
-      skills: ["Chrome Extension", "JavaScript", "HTML/CSS", "UI/UX"],
-    },
-    {
-      title: "Flash Convert - Instant Auto Unit Conversion",
-      description:
-        "Chrome extension for instant unit conversions via right-click. Supports time zones, currencies, temperatures, lengths, and weights with real-time rates and customizable preferences.",
-      link: "https://chromewebstore.google.com/detail/hhikhokgmfkagadbbjkkoeggmhcaiphm?utm_source=item-share-cb",
-      src: "/image/convert.png",
-      skills: ["Chrome Extension", "JavaScript", "API Integration", "UI/UX"],
-    },
-    {
-      title: "Speed Run Ethereum Portfolio",
-      description:
-        "Learning journey through Ethereum development challenges. Built smart contracts, NFT minting, token staking, and DeFi protocols using Solidity, Hardhat, and Scaffold-ETH 2.",
-      link: "https://speedrunethereum.com/builders/0xEe3869d7dFc3e1a2CB6399E00C6a39E019E1A80b",
-      src: "/image/eth.png",
-      skills: ["Solidity", "Hardhat", "Next.js", "Scaffold-ETH 2", "Web3"],
-    },
-    {
-      title: "MemeMe.hk",
-      description:
-        "Full-stack meme generator where users browse meme templates, add customizable text overlays, and share memes. Includes Supabase auth (Email OTP + Google OAuth), bookmarking, user uploads with quotas, and an admin panel for template management.",
-      link: "https://www.mememe.hk",
-      src: "/image/MemeMe.png",
-      skills: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind",
-        "Supabase",
-        "Zustand",
-        "gif.js",
-        "FFmpeg",
-        "Vercel",
-      ],
-    },
-    {
-      title: "Full-stack Multi-Tenant Ticketing SaaS",
-      description:
-        "Built in The Road to Next Basic course, focusing on Next.js App Router, server components/actions, forms, auth, pagination, and REST API design.",
-      link: "https://road-to-next-website.vercel.app/",
-      src: "/image/road-to-next.png",
-      skills: [
-        "Next.js",
-        "TypeScript",
-        "PostgreSQL",
-        "Prisma",
-        "REST API",
-        "App Router",
-        "Server Actions",
-      ],
-    },
-  ];
+  const contentList = PROJECTS.map((project) => ({
+    title: project.title,
+    description: project.description,
+    link: project.link,
+    src: project.imageUrl,
+    skills: project.techStack,
+  }));
   return (
     <>
       <div id="projects" className="pt-16 flex flex-col overflow-hidden">
         <div className="section-divider"></div>
-        <h2 className="self-center mb-12 text-3xl lg:text-4xl font-bold text-gradient animate-fadeIn">
+        <h2 className="self-center mb-12 text-3xl lg:text-4xl font-bold text-gradient animate-fadeIn ">
           projects
         </h2>
 

@@ -1,30 +1,10 @@
-import { Link } from "@nextui-org/link";
+import { SKILLS } from "@/data";
 
 export default function Skills() {
-  const contentList = [
-    {
-      title: "Languages",
-      sub: ['"TypeScript, Javascript, Python, Haskell, C, Dart, C#"'],
-    },
-    {
-      title: "Frontend",
-      sub: [
-        '"Next.js, ReactJS, React Native, Flutter, Tailwind CSS, Bootstrap, HTML/CSS"',
-      ],
-    },
-    {
-      title: "Backend",
-      sub: ['"NodeJs, Express.js, MongoDB, SQL, LangChain, OpenAI"'],
-    },
-    {
-      title: "Blockchain",
-      sub: ['"Solidity, Forge, Wagmi, OpenZeppelin"'],
-    },
-    {
-      title: "Tools",
-      sub: ['"Figma, Photoshop, Git, Docker, Unity"'],
-    },
-  ];
+  const contentList = Object.entries(SKILLS).map(([title, sub]) => ({
+    title: title.charAt(0).toUpperCase() + title.slice(1),
+    sub,
+  }));
   return (
     <>
       <div id="skills" className="pt-8 sm:pt-12 lg:pt-16 h-full px-2 sm:px-4">
@@ -37,7 +17,7 @@ export default function Skills() {
                 <span className="purple font-semibold">const </span>
                 <span className="green font-semibold">{item.title}</span>
                 <span className="text-gray-300"> = </span>
-                <span className="orange break-all">{item.sub.join(", ")}</span>
+                <span className="orange break-all">"{item.sub.join(", ")}"</span>
               </div>
             </div>
           ))}

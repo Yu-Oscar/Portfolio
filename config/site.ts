@@ -1,28 +1,13 @@
+import { PORTFOLIO_DATA } from "@/data";
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Oscar Yu",
-	description: "Oscar Yu's Personal Portfolio",
-	navItems: [
-    {
-      label: "_skills",
-      href: "#skills",
-    },
-    {
-      label: "_projects",
-      href: "#projects",
-    },
-    // {
-    //   label: "_experience",
-    //   href: "#experience",
-    // },
-    // {
-    //   label: "_contact-me",
-    //   href: "#contact-me",
-    // }
-	],
+	name: PORTFOLIO_DATA.name,
+	description: PORTFOLIO_DATA.description,
+	navItems: PORTFOLIO_DATA.navItems,
 	links: {
-		github: "https://github.com/Yu-Oscar",
-		linkedin: "https://www.linkedin.com/in/oscar-yu-cheuk-chun/"
+		github: PORTFOLIO_DATA.links.find((link) => link.name.toLowerCase() === "github")?.url ?? "",
+		linkedin: PORTFOLIO_DATA.links.find((link) => link.name.toLowerCase() === "linkedin")?.url ?? "",
 	},
 };

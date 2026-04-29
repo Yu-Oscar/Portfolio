@@ -3,6 +3,7 @@ import { Providers } from "./providers";
 import { Fira_Code as FontMono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+import { PORTFOLIO_DATA } from "@/data";
 
 const fontMono = FontMono({
   subsets: ["latin"],
@@ -10,8 +11,8 @@ const fontMono = FontMono({
 });
 
 export const metadata: Metadata = {
-  title: "Oscar Yu",
-  description: "Oscar Yu's Personal Portfolio",
+  title: PORTFOLIO_DATA.name,
+  description: PORTFOLIO_DATA.description,
 };
 
 export default function RootLayout({
