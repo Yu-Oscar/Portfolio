@@ -17,7 +17,7 @@ export default function Skills() {
                 <span className="purple font-semibold">const </span>
                 <span className="green font-semibold">{item.title}</span>
                 <span className="text-gray-300"> = </span>
-                <span className="orange break-all">"{item.sub.join(", ")}"</span>
+                <span className="orange break-all">{`"${item.sub.join(", ")}"`}</span>
               </div>
             </div>
           ))}
